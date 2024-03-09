@@ -29,5 +29,38 @@
 #
 # print(has_duplicates(numbers))  # Вывод: False
 # print(has_duplicates(words))    # Вывод: True
+#
+# Напишите функцию count_unique_words, которая принимает строку и возвращает количество уникальных слов в этой строке.
+# Слова считаются уникальными независимо от регистра символов (то есть "Hello" и "hello" считаются одним и тем же словом).
 
+# text = "Python is a powerful programming language. Python is also easy to learn."
+# def count_unique_words(some_text: str):
+#     some_text_new = some_text.lower().split()
+#     words_out = set(some_text_new)
+#     counter = len(words_out)
+#     return f'{counter} кол-во уникальных слов в нашем тексе'
+# print(count_unique_words(text))
 
+# У вас есть список студентов и их оценки за несколько предметов. Напишите функцию Python,
+# которая принимает этот список в качестве входных данных и возвращает словарь,
+# в котором ключами являются имена студентов, а значениями - средние оценки каждого студента.
+# students_grades = {
+#     "Анна": [85, 90, 92],
+#     "Борис": [75, 80, 85],
+#     "Виктория": [90, 95, 88]
+# }
+#
+#
+# def calculate_average_grade(some_dict: dict):
+#     students = {}
+#     for name, grades in some_dict.items():
+#         counter = 0
+#         if name not in students:
+#             for grade in grades:
+#                 counter += grade
+#             aver = counter / len(grades)
+#             students[name] = aver
+#     return students
+#
+#
+# print(calculate_average_grade(students_grades))
