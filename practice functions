@@ -1,0 +1,24 @@
+temperatures = [18, 21, 19, 25, 27, 23, 20]
+def get_average(temperatures):
+    average = round(sum(temperatures) / len(temperatures),2)
+    return average
+average_temperature = (get_average(temperatures))
+
+def get_max_temperature(temperatures):
+    max_temperature = max(temperatures)
+    return max_temperature
+max_temperature = get_max_temperature(temperatures)
+
+def get_weather_comment(average_temperature):
+    if average_temperature < 10:
+        resalt = "Холодно"
+    elif 10 <= average_temperature <= 20:
+        resalt = "Прохладно"
+    elif 20 <= average_temperature <= 25:
+        resalt = "Тепло"
+    else:
+        resalt = "Жарко"
+    return resalt
+resalt_weather = get_weather_comment(average_temperature)
+print(get_average(temperatures))
+print(get_weather_comment(average_temperature))
