@@ -1,0 +1,47 @@
+basket = [['water', 30], ['coffe', 25], ['bread', 10], ['beer', 50]]
+new_good = input('хотите еще что то купить?   y or n   ')
+def get_basket(basket, new_good):
+    """Функция запрашивает список товаров и вопрос о добавлении товаров
+    если надо добавить - спрашивает что и какая цена
+    и спрашивает до тех пор, пока не будет ответ нет
+    результат функции возвращает корзину с товарами"""
+    while new_good == "y":
+        good_name = input('Введите товар ')
+        good_price = int(input('Введите цену '))
+        basket.append([good_name, good_price])
+        new_good = input('хотите еще что то купить?   y or n   ')
+    return basket
+basket_goods = get_basket(basket, new_good)
+
+disc_first_good = int(input("Введите скидку для первого товара "))
+
+def discount_first_good (basket_goods, disc_first_good ):
+    """Функция запрашивает список товаров, отбирает первый и делает для него скидку,
+    которую пользователь вводит вручную.
+    Возвращает цену первого товара с учетом скидки"""
+    first_good_price = basket_goods[0][1] - (basket_goods[0][1] * disc_first_good / 100)
+    return first_good_price
+basket_discount_first_good = discount_first_good(basket_goods, disc_first_good)
+
+def summa_basket(basket_goods):
+    """Функция запрашивает список товаров и считает сумму товаров.
+    Возвращает сумму к оплате"""
+    summa = 0
+    for elem in basket_goods:
+        summa = summa + elem[1]
+    return  summa
+summa_to_pay = summa_basket(basket_goods)
+
+def summa_basket_discount_first_dood(basket_goods, basket_discount_first_good ):
+    """Функция запрашивает список товаров и скидку для первого товара в корзине
+    считает сумму к оплате общую"""
+    summa = 0
+    for index, elem  in enumerate(basket_goods):
+        if index == 0:
+            summa = summa + basket_discount_first_good
+        else:
+            summa = summa +elem[1]
+    return summa
+resalt = summa_basket_discount_first_dood(basket_goods, basket_discount_first_good)
+print(basket_goods)
+print(resalt)
