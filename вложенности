@@ -1,0 +1,72 @@
+shop = {
+    "name": "КОЛО",
+    "employees": [
+        {"name": "Анна", "position": "кассир", "age": 25},
+        {"name": "Олег", "position": "продавец", "age": 31},
+        {"name": "Мария", "position": "администратор", "age": 42}
+    ]
+}
+# Выведи имя первого сотрудника.
+# print(shop["employees"][0]["name"])
+# Выведи должность Олега.
+# print(shop["employees"][1]["position"])
+# Выведи возраст Марии.
+# print(shop["employees"][2]["age"])
+# Выведи весь словарь с Анной.
+# print(shop["employees"][0])
+# Выведи имя последнего сотрудника.
+# print(shop["employees"][-1]["name"])
+# shop["employees"].append({"name": "новый", "position": "администратор", "age": 0})
+# print(shop)
+
+stores = [
+    {
+        "city": "Киев",
+        "departments": ["Молочный", "Бакалея", "Овощи"]
+    },
+    {
+        "city": "Львов",
+        "departments": ["Мясо", "Рыба", "Напитки"]
+    }
+]
+# Выведи город первого магазина.
+# print(stores[0]["city"])
+# Выведи первый отдел первого магазина.
+# print(stores[0]["departments"][1])
+# Выведи третий отдел первого магазина.
+# print(stores[0]["departments"][2])
+# Выведи второй отдел второго магазина.
+# print(stores[1]["departments"][1])
+# Выведи последний отдел второго магазина.
+# print(stores[1]["departments"][-1])
+
+sales = [
+    {
+        "store": "Киев",
+        "products": [
+            {"name": "Хлеб", "sales": 120},
+            {"name": "Молоко", "sales": 200},
+            {"name": "Сыр", "sales": 80}
+        ]
+    },
+    {
+        "store": "Львов",
+        "products": [
+            {"name": "Хлеб", "sales": 90},
+            {"name": "Молоко", "sales": 150},
+            {"name": "Сыр", "sales": 60}
+        ]
+    }
+]
+# Выведи продажи хлеба в Киеве.
+# print(sales[0]["products"][0]['sales'])
+# Выведи название второго товара в Киеве.
+# print(sales[1]["products"][1]['name'])
+# Выведи продажи сыра в Киеве.
+# print(sales[0]["products"][2]["sales"])
+# Выведи продажи молока во Львове.
+# print(sales[1]["products"][1]['sales'])
+# Выведи название третьего товара во Львове.
+# print(sales[1]["products"][2]["sales"])
+# Выведи продажи третьего товара во Львове.
+# print(sales[1]["products"][2]["sales"])
