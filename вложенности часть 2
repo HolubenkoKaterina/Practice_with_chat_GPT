@@ -1,0 +1,45 @@
+sales = [
+    {
+        "store": "Киев",
+        "products": [
+            {"name": "Хлеб", "price": 40, "quantity": 5},
+            {"name": "Молоко", "price": 55, "quantity": 8}
+        ]
+    },
+    {
+        "store": "Львов",
+        "products": [
+            {"name": "Сыр", "price": 180, "quantity": 3},
+            {"name": "Масло", "price": 90, "quantity": 6}
+        ]
+    }
+]
+# print(sales[0]['products'][1]["quantity"])
+# print(sales[1]["products"][0]["price"])
+
+products = [
+    {
+        "name": "Ноутбук",
+        "price": 30000,
+        "stores": ["Киев", "Львов", "Одесса"]
+    },
+    {
+        "name": "Телефон",
+        "price": 18000,
+        "stores": ["Харьков", "Киев"]
+    },
+    {
+        "name": "Планшет",
+        "price": 12000,
+        "stores": ["Одесса", "Львов", "Днепр"]
+    }
+]
+print(products[1]['name'])
+"""products.append({ "name": "Ноутбук",
+        "price": 20000,
+        "stores": ["новый"]})"""
+
+products.insert(2,{ "name": "!!!!!!!!!",
+        "price": 20000,
+        "stores": ["новый"]})
+print(products)
