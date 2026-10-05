@@ -1,0 +1,73 @@
+"""company = {
+    "kyiv": {
+        "sales": 500000,
+        "stores": 25
+    },
+    "lviv": {
+        "sales": 320000,
+        "stores": 14
+    },
+    "odesa": {
+        "sales": 280000,
+        "stores": 12
+    }
+}
+print(company["lviv"]['sales'])
+print(company['kyiv']['stores'])
+"""
+"""company = {
+    "kyiv": {
+        "sales": {
+            "january": 450000,
+            "february": 500000,
+            "march": 530000
+        },
+        "stores": 25
+    },
+    "lviv": {
+        "sales": {
+            "january": 290000,
+            "february": 320000,
+            "march": 350000
+        },
+        "stores": 14
+    }
+}
+# print(company['lviv']['sales']['march'])
+company["kyiv"]['sales']["february"] = 520000
+# print(company["kyiv"]['sales'])
+company["kyiv"]['sales']["april"] = 550000
+# print(company["kyiv"]['sales'])
+company["lviv"]['sales']["april"] = 370000
+# print(company["kyiv"]['sales'], company["lviv"]['sales'])
+del company["lviv"]['sales']["january"]
+# print(company["lviv"]['sales'])
+del company['kyiv']["sales"]['march']
+print(company["kyiv"]['sales'])"""
+
+products = {
+    "coffee": {
+        "price": 250,
+        "quantity": 15
+    },
+    "tea": {
+        "price": 120,
+        "quantity": 30
+    },
+    "milk": {
+        "price": 60,
+        "quantity": 25
+    }
+}
+products["coffee"]["quantity"] += 5
+# print(products["coffee"]["quantity"])
+products["tea"]["quantity"] -= 7
+# print(products["tea"]["quantity"])
+products["milk"]["price"] *= 1.1
+# print(products["milk"]["price"])
+# посчитай общую сумму продаж кофе: цена × количество
+sales = products["coffee"]["price"] * products["coffee"]["quantity"]
+products["coffee"]["sales"] = sales
+# print(products["coffee"])
+products["tea"]["sales"] = products["tea"]["quantity"] * products["tea"]["price"]
+# print(products["tea"])
